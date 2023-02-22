@@ -24,6 +24,17 @@ public class ShapesService {
         logger.debug("xPoints {} | yPoints {}", xPoints, yPoints);
         // WRITE HERE YOUR CODE
         var dto = new RectangleDto();
+
+        Integer BC = xPoints.get(2) - xPoints.get(1);
+//        Integer AB = yPoints.get(1) - yPoints.get(0);
+        Double AB = Math.sqrt(Math.pow(xPoints.get(1) - xPoints.get(0), 2) + Math.pow(yPoints.get(1) - yPoints.get(0), 2));
+
+
+        dto.base = AB;
+        dto.height = new Double(BC);
+        dto.perimeter = dto.base * 2 + dto.height * 2;
+        dto.area = dto.base * dto.height;
+
         return dto;
     }
 }
