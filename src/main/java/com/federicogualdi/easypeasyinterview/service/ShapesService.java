@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import java.util.List;
 
 @ApplicationScoped
 public class ShapesService {
@@ -13,10 +14,14 @@ public class ShapesService {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Inject
-    DataService dataService;
+    private DataService dataService;
 
     public RectangleDto computeRectangleData() {
-        logger.debug("xPoints {} | yPoints {}", dataService.getRectangleXPoints(), dataService.getRectangleYPoints());
+        return computeRectangleData(dataService.getRectangleXPoints(), dataService.getRectangleYPoints());
+    }
+
+    protected RectangleDto computeRectangleData(List<Integer> xPoints, List<Integer> yPoints) {
+        logger.debug("xPoints {} | yPoints {}", xPoints, yPoints);
         // WRITE HERE YOUR CODE
         var dto = new RectangleDto();
         return dto;
