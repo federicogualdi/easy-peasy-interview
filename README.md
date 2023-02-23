@@ -1,6 +1,9 @@
+### This is a repo with simple questions that can be asked of high school students during interviews for an intership
+
 # Easy Peasy Interview
 
-Given two lists of Oxy points: one for the X axis and the other for Y, calculate Area and Perimeter of the shape.
+Exercises:
+1. Given two lists of Oxy points: one for the X axis and the other for Y, calculate Area and Perimeter of the shape.
 
 ## Running the application in dev mode
 
