@@ -1,4 +1,4 @@
-package com.federicogualdi.easypeasyinterview.rest.dto;
+package com.federicogualdi.easypeasyinterview.rest.dto.exercise1;
 
 public class RectangleDto {
     public Double base;

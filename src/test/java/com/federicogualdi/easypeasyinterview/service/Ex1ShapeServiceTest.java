@@ -1,7 +1,5 @@
 package com.federicogualdi.easypeasyinterview.service;
 
-import com.federicogualdi.easypeasyinterview.rest.dto.RectangleDto;
-import com.federicogualdi.easypeasyinterview.service.ShapesService;
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -10,8 +8,9 @@ import javax.inject.Inject;
 import java.util.List;
 
 @QuarkusTest
-public class ShapeServiceTest {
-    @Inject ShapesService shapesService;
+public class Ex1ShapeServiceTest {
+    @Inject
+    Ex1ShapesService shapesService;
 
     @Test
     public void testRectangleComputation() {

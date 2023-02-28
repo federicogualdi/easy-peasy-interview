@@ -1,6 +1,6 @@
 package com.federicogualdi.easypeasyinterview.rest;
 
-import com.federicogualdi.easypeasyinterview.service.ShapesService;
+import com.federicogualdi.easypeasyinterview.service.Ex2TriangleService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,20 +12,20 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@Path("/")
+@Path("2")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class ShapesRest {
+public class Ex2TriangleRest {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Inject
-    ShapesService shapesService;
+    Ex2TriangleService triangleService;
 
     @GET
     public Response computeRectangleData() {
-        logger.info("Compute Rectangle Data has been call");
-        var dto = shapesService.computeRectangleData();
+        logger.info("Compute Triangle Data has been call");
+        var dto = triangleService.computeTriangleData();
         return Response.ok(dto).build();
     }
 }
